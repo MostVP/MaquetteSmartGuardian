@@ -1,0 +1,66 @@
+<!Doctype Html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>PlateForme SmartWatch</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/styleprincipal.css">
+	</head>
+	<body>
+		<div class="container" id="all">
+			<header>
+				<div id="topheader" class="row">
+					<div class="col-sm-12">
+						<a href="index"><div id="logo"></div></a>
+						<span id="title"></span>
+						<a href="connexion"><button id="login" >Log out</button></a>
+					</div>
+				</div>
+				<div id="middleheader" class="row">
+
+					<div class="col-sm-2" style="margin-top:16px; font-size: 15px">Bienvenue, lionel!</div>
+					<div id="verticalline" class="col-sm-2"></div>
+					<div class="col-sm-1" style="margin-top:16px; font-size : 30px">22:21</div>
+				</div>
+			</header>
+			<div class="row">
+				<div class="col-sm-12" id="content">
+					<div id="suivi">Suivi de la cible:</div>
+					<div id="videodistance">
+						
+						<div id="distance">
+							Distance à la cible : 7m
+						</div>
+						<button id="open-or-join-room" onclick="test()">OOJR</button>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<footer class="col-sm-12"></footer>
+			</div>
+		</div>
+		<script src="https://rtcmulticonnection.herokuapp.com/dist/RTCMultiConnection.min.js"></script>
+		<script src="https://rtcmulticonnection.herokuapp.com/socket.io/socket.io.js"></script>
+		<script>
+			var connection = new RTCMultiConnection();
+
+			// this line is VERY_important
+			connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
+
+			// if you want audio+video conferencing
+			connection.session = {
+			    audio: true,
+			    video: true
+			};
+			connection.sdpConstraints.mandatory = {
+			    OfferToReceiveAudio: true,
+			    OfferToReceiveVideo: true
+			};
+			function test(){
+				connection.openOrJoin('gakokamgalion');
+			}
+			
+		</script>
+
+	</body>
+</html>

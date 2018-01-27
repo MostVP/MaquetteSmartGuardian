@@ -1,0 +1,71 @@
+<!Doctype Html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>PlateForme SmartWatch</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/stylegestionadmin.css">
+	</head>
+	<body>
+		<div class="container" id="all">
+			<header>
+				<div id="topheader" class="row">
+					<div class="col-sm-12">
+						<a href="index"><div id="logo"></div></a>
+						<span id="title"></span>
+						<a href="connexion"><button id="login" >Log out</button></a>
+					</div>
+				</div>
+			</header>
+			<div class="row">
+				<div class="col-sm-12" id="content">
+					<div id="main">
+						<ul class="nav nav-tabs">
+						  <li class="active" id="signin"><a data-toggle="tab" href="#panel1" role="tab">Ajouter un administrateur</a></li>
+						  <li  id="signin"><a  data-toggle="tab" href="#panel2" role="tab">Supprimer Un administrateur</a></li> 
+						</ul>
+						<div class="tab-content card">
+							<div id="panel1" role="tabpanel" class="tab-pane active">
+								<form  method="post" action ="adddb">
+									<div class="form-group">
+										<br><br>
+										<label for="pseudo">Pseudo de l'administrateur:</label>
+										<input type="text" class="form-control" id="pseudo" name ="login">
+									</div>
+									<div class="form-group">
+										<label for="mdp">Mot de passe de l'administrateur:</label>
+										<input type="password" class="form-control" id="mdp" name="password">
+									</div>
+								
+									<button type="submit"  id="submit">Ajouter ce compte</button>
+								</form>
+							</div>
+							<div id="panel2" role="tabpanel" class="tab-pane">
+								<br><br>
+								<form  method="post" action = "deletefromdb">
+								<div class="form-group">
+								  <label for="sel1">Selectionnez les comptes à supprimer:</label>
+								  <select multiple class="form-control" id="sel1"  name = "select">
+								    <% admins.forEach(function(admin) { %>
+								        <option><%= admin.login %></option>
+								    <% }); %>
+								  </select>
+								</div> 
+								<button type="submit"  id="submit">Supprimer</button>
+							</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<footer class="col-sm-12"></footer>
+			</div>
+		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+
+</html>

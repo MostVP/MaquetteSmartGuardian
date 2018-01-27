@@ -1,0 +1,55 @@
+#all{
+	width: 1000px;
+	
+}
+header{
+	
+	width: 1000px;
+}
+#topheader{
+	height: 73px;
+	width:1000px;
+	background-color: #131313;
+}
+#logo{
+	position: absolute;
+	left :27px;
+	width : 200px;
+	height : 23px;
+	top : 25px;
+	background-image: url(Smartwatch.png);
+}
+body{
+	overflow:hidden;
+}
+body{
+	background-color: #282828;
+}
+#content{
+	height: 1035px;
+	width: 1000px;
+	background-color: #fdfdfd;
+}
+#main{
+	width: 60%;
+	margin-left: 200px;
+	margin-top: 150px;
+	
+}
+#signin{
+	text-align:center;
+	color : #0968b8;
+	font-size: 50px;
+
+
+}
+#submit{
+	width:200px;
+	height : 60px;
+	background-color: #0968b8;
+	border : none;
+	color : #fdfdfd;
+	font-weight : bold;
+	font-size : 20px;
+	border-radius : 4px;
+}

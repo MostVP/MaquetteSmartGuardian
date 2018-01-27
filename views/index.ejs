@@ -1,0 +1,58 @@
+<!Doctype Html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>SmartGuardian</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="container" id="all">
+			<header>
+				<div id="topheader" class="row">
+					<div class="col-sm-12">
+						<a href="index"><div id="logo"></div></a>
+						<span id="title"></span>
+						<a href="connexion"><button id="login" >Sign in</button></a>
+					</div>
+				</div>
+				<div id="middleheader" class="row">
+
+					<div class="col-sm-2" style="margin-top:16px; font-size: 15px">Bienvenue, veuillez vous connecter!</div>
+					<div id="verticalline" class="col-sm-2"></div>
+					<div class="col-sm-1" style="margin-top:16px; font-size : 30px">22:21</div>
+				</div	>
+				<div id="bottomheader" class="row">
+					<div class="col-sm-12" id="banner"></div>
+				</div>
+			</header>
+			<div class="row">
+				<div class="col-sm-12" id="content">
+					<div class="col-sm-3" id="item">SmartGuardian est un système de garde intelligent, il assure la protection d'un objet précieux en déclenchant une alarm>
+e et une action définie par propriétaire de l'objet lorsqu'une personne non autorisée tente d'entrer en contact avec celui ci.</div>
+					<div class="col-sm-3" id="item">SmartGuardian est à la fois économique et performant dans la mesure ou le système utilise un ensemble de capteurs il ne peut donc etre auteur de negligence ou de manque d’attention contrairement à un garde humain.</div>
+					<div class="col-sm-3" id="item">La technologie embarquée utilisée pour la fabrication de SmartGuardian ont donné naissance à un système peut encombrant et simple pouvant être utilisé dans quasiment tous les cas de figure.</div>
+				</div>
+			</div>
+			<div class="row">
+				<footer class="col-sm-12"></footer>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src ="jqueryshadow.js">
+
+		</script>
+		<script>
+			$("button").click(function(){
+				$("button").animate({top : '19px',
+					boxShadow:'0 0'
+			},"fast");
+				$("button").animate({top : '18px',
+					boxShadow:'0 1px #fdfdfd'
+			},"fast");
+				
+				
+			});
+		</script>
+	</body>
+</html>
